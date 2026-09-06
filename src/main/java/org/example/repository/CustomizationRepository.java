@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
@@ -15,13 +16,17 @@ public class CustomizationRepository {
 
     public CustomizationRepository() {
         customizations.put("1", new Customization("1", "Extra Sugar", new BigDecimal("10.00")));
-        customizations.put("2", new Customization("2", "Extra Shot", new BigDecimal("40.00")));
-        customizations.put("3", new Customization("3", "Almond Milk", new BigDecimal("50.00")));
+        customizations.put("2", new Customization("2", "Extra Shot", new BigDecimal("20.00")));
+        customizations.put("3", new Customization("3", "Almond Milk", new BigDecimal("30.00")));
         customizations.put("4", new Customization("4", "Less Sugar/ Milk", BigDecimal.ZERO));
     }
 
     public List<Customization> findAll() {
         return new ArrayList<>(customizations.values());
+    }
+
+    public Optional<Customization> findById(String id) {
+        return Optional.ofNullable(customizations.get(id));
     }
 
 }
