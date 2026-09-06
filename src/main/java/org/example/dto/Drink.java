@@ -1,14 +1,15 @@
 package org.example.dto;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Drink {
     private String id;
     private String name;
     private BigDecimal basePrice;
-
-    public Drink(String id, String americano, BigDecimal bigDecimal) {
-    }
 }

@@ -1,5 +1,7 @@
 package org.example.controller;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.example.dto.Drink;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,13 +13,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/menu")
+@AllArgsConstructor
 public class MenuController {
 
     private final MenuService menuService;
-
-    public MenuController(MenuService menuService) {
-        this.menuService = menuService;
-    }
 
     @GetMapping("/drinks")
     public ResponseEntity<List<Drink>> getDrinks() {
