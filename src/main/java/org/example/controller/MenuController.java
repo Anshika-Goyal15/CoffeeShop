@@ -2,6 +2,7 @@ package org.example.controller;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import org.example.dto.Customization;
 import org.example.dto.Drink;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,11 @@ public class MenuController {
     @GetMapping("/drinks")
     public ResponseEntity<List<Drink>> getDrinks() {
         return ResponseEntity.ok(menuService.getAllDrinks());
+    }
+
+    @GetMapping("/customizations")
+    public ResponseEntity<List<Customization>> getCustomizations() {
+        return ResponseEntity.ok(menuService.getAllCustomizations());
     }
 
 }
