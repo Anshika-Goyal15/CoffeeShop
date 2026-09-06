@@ -1,6 +1,6 @@
-package repository;
+package org.example.repository;
 
-import dto.Drink;
+import org.example.dto.Drink;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

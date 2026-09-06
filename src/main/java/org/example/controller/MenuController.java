@@ -1,11 +1,11 @@
-package controller;
+package org.example.controller;
 
-import dto.Drink;
+import org.example.dto.Drink;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import service.MenuService;
+import org.example.service.MenuService;
 
 import java.util.List;
 

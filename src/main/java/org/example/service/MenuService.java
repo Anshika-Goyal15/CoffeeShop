@@ -1,8 +1,8 @@
-package service;
+package org.example.service;
 
-import dto.Drink;
+import org.example.dto.Drink;
 import org.springframework.stereotype.Service;
-import repository.DrinkRepository;
+import org.example.repository.DrinkRepository;
 
 import java.util.List;
 @Service
